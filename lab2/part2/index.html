@@ -6,7 +6,6 @@ Date: 04 june 2026
 Description: A webpage about the planets of our solar system, using a table to display data about each planet.
 -->
 
-
 <!doctype html>
 <html lang="en-US">
   <head>
@@ -19,31 +18,15 @@ Description: A webpage about the planets of our solar system, using a table to d
     <h1>Planet data table</h1>
 
     <table>
-
-      <caption>
-        Data about the planets of our solar system (Planetary facts taken from
-        <a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/">
-          Nasa's Planetary Fact Sheet - Metric
-        </a>).
-      </caption>
-
+      <caption>Data about the planets of our solar system (Planetary facts taken from <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a>).</caption>
       <colgroup>
-        <col>
-        <col>
-        <col class="column-border">
-        <col>
-        <col>
-        <col>
-        <col>
-        <col>
-        <col>
-        <col>
-        <col>
-        <col>
+        <col span="2">
+        <col style="border: 2px solid black">
+        <col span="9">
       </colgroup>
-  <thead>
+      <thead>
     <tr>
-      <th></th>
+      <td colspan="2"></td>
       <th scope="col">Name</th>
       <th scope="col">Mass (10<sup>24</sup>kg)</th>
       <th scope="col">Diameter (km)</th>
@@ -58,7 +41,7 @@ Description: A webpage about the planets of our solar system, using a table to d
   </thead>
 <tbody>
     <tr>
-      <th scope="rowgroup" rowspan="4">Terrestrial planets</th>
+      <th rowspan="4" colspan="2" scope="rowgroup">Terrestrial planets</th>
       <th scope="row">Mercury</th>
       <td>0.330</td>
       <td>4,879</td>
@@ -106,61 +89,59 @@ Description: A webpage about the planets of our solar system, using a table to d
       <td>2</td>
       <td>Known as the Red Planet.</td>
     </tr>
-  <tr>
-    <th scope="rowgroup" rowspan="4">Jovian planets</th>
-    <th scope="rowgroup" rowspan="2">Gas giants</th>
-    <th scope="row">Jupiter</th>
-    <td>1898</td>
-    <td>142,984</td>
-    <td>1,326</td>
-    <td>23.1</td>
-    <td>9.9</td>
-    <td>778.6</td>
-    <td>-110</td>
-    <td>79</td>
-    <td>Largest planet in our solar system.</td>
-  </tr>
-
-  <tr>
-    <th scope="row">Saturn</th>
-    <td>568</td>
-    <td>120,536</td>
-    <td>687</td>
-    <td>9.0</td>
-    <td>10.7</td>
-    <td>1433.5</td>
-    <td>-140</td>
-    <td>82</td>
-    <td>Known for its prominent ring system.</td>
-  </tr>
-  <tr>
-    <th scope="rowgroup" rowspan="2">Ice giants</th>
-    <th scope="row">Uranus</th>
-    <td>86.8</td>
-    <td>51,118</td>
-    <td>1,270</td>
-    <td>8.7</td>
-    <td>17.2</td>
-    <td>2872.5</td>
-    <td>-195</td>
-    <td>27</td>
-    <td>Has a unique sideways rotation.</td>
-  </tr>
-
-  <tr>
-    <th scope="row">Neptune</th>
-    <td>102</td>
-    <td>49,528</td>
-    <td>1,638</td>
-    <td>11.0</td>
-    <td>16.1</td>
-    <td>4495.1</td>
-    <td>-200</td>
-    <td>14</td>
-    <td>Farthest planet from the Sun.</td>
-  </tr>
     <tr>
-      <th scope="rowgroup">Dwarf planets</th>
+      <th rowspan="4" scope="rowgroup">Jovian planets</th>
+      <th rowspan="2" scope="rowgroup">Gas giants</th>
+      <th scope="row">Jupiter</th>
+      <td>1898</td>
+      <td>142,984</td>
+      <td>1,326</td>
+      <td>23.1</td>
+      <td>9.9</td>
+      <td>778.6</td>
+      <td>-110</td>
+      <td>79</td>
+      <td>Largest planet in our solar system.</td>
+    </tr>
+    <tr>
+      <th scope="row">Saturn</th>
+      <td>568</td>
+      <td>120,536</td>
+      <td>687</td>
+      <td>9.0</td>
+      <td>10.7</td>
+      <td>1433.5</td>
+      <td>-140</td>
+      <td>82</td>
+      <td>Known for its prominent ring system.</td>
+    </tr>
+    <tr>
+      <th rowspan="2" scope="rowgroup">Ice giants</th>
+      <th scope="row">Uranus</th>
+      <td>86.8</td>
+      <td>51,118</td>
+      <td>1,270</td>
+      <td>8.7</td>
+      <td>17.2</td>
+      <td>2872.5</td>
+      <td>-195</td>
+      <td>27</td>
+      <td>Has a unique sideways rotation.</td>
+    </tr>
+    <tr>
+      <th scope="row">Neptune</th>
+      <td>102</td>
+      <td>49,528</td>
+      <td>1,638</td>
+      <td>11.0</td>
+      <td>16.1</td>
+      <td>4495.1</td>
+      <td>-200</td>
+      <td>14</td>
+      <td>Farthest planet from the Sun.</td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row">Dwarf planets</th>
       <th scope="row">Pluto</th>
       <td>0.0146</td>
       <td>2,377</td>
