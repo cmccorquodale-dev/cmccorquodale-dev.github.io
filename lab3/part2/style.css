@@ -41,3 +41,20 @@ h1, h2, h3 {
     font-family: 'Roboto Slab', serif;
     font-weight: 700; 
 }
+h1 { font-size: 3rem;
+     text-align: center;
+}
+
+h2 { font-size: 2rem; 
+     margin-bottom: 0;
+}
+
+h3 { font-size: 1.6rem; }
+
+p  { font-size: 1rem; }
+
+section h2 + p,
+section h3 + p,
+section h1 + p {
+  text-indent: 2rem;
+}
