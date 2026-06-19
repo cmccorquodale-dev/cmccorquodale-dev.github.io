@@ -78,3 +78,17 @@ a[href^="http"]::after {
   height: 12px;
   margin-left: 4px;
 }
+
+ul,
+ol {
+  line-height: 1.6;
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem; 
+}
+
+ul,
+ol,
+li::marker{
+  content: "➤";
+  color: #aa6666;
+}
