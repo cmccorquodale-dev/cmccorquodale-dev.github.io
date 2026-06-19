@@ -72,13 +72,15 @@ a:focus {
 }
 
 a[href^="http"]::after {
-  content: url("external-link-52.png");
-  background-repeat: no-repeat;
-  background-size: 1rem 1rem;
-  background-position: right center;
-  padding-right: 1.4rem;
-
+  content: "";
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-left: 0.3rem;
+  background: url("external-link-52.png") no-repeat center center;
+  background-size: contain;
 }
+
 
 ul,
 ol {
