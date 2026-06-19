@@ -74,8 +74,8 @@ a:focus {
 a[href^="http"]::after {
   content: url("external-link-52.png");
   display: inline-block;
-  width: 12px;
-  height: 12px;
+  width: 5px;
+  height: 5px;
   margin-left: 4px;
 }
 
@@ -91,4 +91,33 @@ ol,
 li::marker{
   content: "➤";
   color: #aa6666;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin-bottom: 1rem;
+}
+
+nav a {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: #aa6666;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Roboto Slab', serif;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #cc8888;
+  outline: none;
 }
