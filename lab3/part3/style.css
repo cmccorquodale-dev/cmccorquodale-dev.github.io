@@ -30,6 +30,12 @@ img {
 nav {
   background-color: black;
   padding: 0.5em;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
 }
 
 nav ul {
@@ -42,6 +48,7 @@ nav a {
   color: white;
   text-decoration: none;
   padding: 0.5em 1em;
+  margin: 0 1rem;
 }
 
 .photos {
@@ -52,4 +59,22 @@ nav a {
 
 .feature {
   width: 200px;
+}
+
+.feature-img {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
 }
