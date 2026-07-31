@@ -32,19 +32,19 @@ function randomValueFromArray(array) {
 // turned into a slug and slithered away
 
 // Partial return random string function
+const Character = randomValueFromArray(["Willy the Goblin", "Big Daddy", "Father Christmas"]);
+const Place = randomValueFromArray(["the soup kitchen", "Disneyland", "the White House"]);
+const Action = randomValueFromArray(["spontaneously combusted", "melted into a puddle on the sidewalk", "turned into a slug and slithered away"]);
 
 function returnRandomStoryString() {
-  const storyText = `It was 94 Fahrenheit outside, so ${name} went for a walk. When they got to ${location}, they stared in horror for a few moments, then ${action}. Bob saw the whole thing, but was not surprised — ${name} weighs ${weight} pounds, and it was a hot day.`;
-  const randomCharacter = randomValueFromArray(["Willy the Goblin", "Big Daddy", "Father Christmas"]);
-  const randomPlace = randomValueFromArray(["the soup kitchen", "Disneyland", "the White House"]);
-  const randomAction = randomValueFromArray(["spontaneously combusted", "melted into a puddle on the sidewalk", "turned into a slug and slithered away"]);
-  return storyText;
+  const randomCharacter = randomValueFromArray(Character);
+  const randomPlace = randomValueFromArray(Place);
+  const randomEvent = randomValueFromArray(Action);
+  let storyText = `It was 94 Fahrenheit outside, so ${randomCharacter} went for a walk. When they got to ${randomPlace}, they stared in horror for a few moments, then ${randomEvent}. Bob saw the whole thing, but was not surprised — ${randomCharacter} weighs 300 pounds, and it was a hot day.`;
+return storyText;
 }
-
-// Event listener and partial generate function definition
-
 generateBtn.addEventListener("click", generateStory);
-const newStory = returnRandomStoryString();
+
 
 function generateStory() {
   let newStory = returnRandomStoryString();

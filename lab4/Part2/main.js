@@ -1,6 +1,6 @@
 /*
 Name: Cailum McCorquodale
-File: index.html
+File: main.js
 INFT1206 – Web Development Fundamentals
 Date: 28 July 2026
 Description: Image gallery example
@@ -14,23 +14,23 @@ const images = [ { filename: 'pic1.jpg', alt: 'Closeup of a human eye' }, { file
 ];
 const baseUrl = 'images/';
 for (const image of images) {
-    const newImage = document.createElement("img");
-    newImage.setAttribute("src", baseUrl + image.filename);
-    newImage.setAttribute("alt", image.alt);
-    newImage.setAttribute('tabindex', '0');
-    thumbBar.appendChild(newImage);
-    newImage.addEventListener("click", (e) => {
-        updateDisplayedImage(image.filename, image.alt);
-    });
-    newImage.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') {
-        updateDisplayedImage(e.target);
-        }
-    });
+  const newImage = document.createElement("img");
+  newImage.src = `${baseUrl}${image.filename}`;
+  newImage.alt = image.alt;
+
+  newImage.tabIndex = "0";
+  thumbBar.appendChild(newImage);
+
+  newImage.addEventListener("click", updateDisplayedImage);
+  newImage.addEventListener("keydown", (e) => {
+    if (e.code === "Enter") {
+      updateDisplayedImage(e);
+    }
+  });
 }   
-function updateDisplayedImage(activeImage) {
-  displayedImage.setAttribute('src', activeImage.getAttribute('src'));
-  displayedImage.setAttribute('alt', activeImage.getAttribute('alt'));
+function updateDisplayedImage(e) {
+  displayedImage.src = e.target.src;
+  displayedImage.alt = e.target.alt;
 }
 btn.addEventListener('click', () => {
   const isDark = btn.classList.contains('dark');
