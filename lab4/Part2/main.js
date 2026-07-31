@@ -19,7 +19,7 @@ for (const image of images) {
     newImage.setAttribute("alt", image.alt);
     newImage.setAttribute('tabindex', '0');
     thumbBar.appendChild(newImage);
-    newImage.addEventListener("click", () => {
+    newImage.addEventListener("click", (e) => {
         updateDisplayedImage(image.filename, image.alt);
     });
     newImage.addEventListener('keydown', (e) => {
